@@ -1,13 +1,13 @@
 const siteMetaInfo = {
   // Used on Header
-  title: "Mondongo",
-  description: "A tech enthusiast & self taught learner. Love to talk the way of tech.",
+  title: "jia",
+  description: "你好，我是jia",
   // Used on Footer
-  slogan: "Let's start coding",
+  slogan: "那么,让我们开始编码吧",
   // System Settings
-  language: "en-us",
+  language: "zh",
   theme: "system", // system, dark or light
-  siteUrl: "https://rathik.dev",
+  siteUrl: "https://ljjk.love",
   siteRepo: "#",
   siteLogo: "../assets/author.png",
   image: "~/assets/author.png",
