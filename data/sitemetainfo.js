@@ -1,6 +1,6 @@
 const siteMetaInfo = {
   // Used on Header
-  title: "jia",
+  title: "Jia",
   description: "你好，我是jia",
   // Used on Footer
   slogan: "那么,让我们开始编码吧",
