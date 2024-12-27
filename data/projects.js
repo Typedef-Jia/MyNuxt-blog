@@ -3,8 +3,8 @@ const projectsData = [
     title: "springboot-multi-module",
     description: `springboot基于maven的多模块聚合项目模板`,
     imgSrc: "",
-    href: "https://github.com/Typedef-Joy/springboot-multi-module",
-    github: "https://github.com/Typedef-Joy/",
+    href: "https://github.com/Typedef-Jia/springboot-multi-module",
+    github: "https://github.com/Typedef-Jia/",
     tech1: "java",
     tech2: "模板"
 
