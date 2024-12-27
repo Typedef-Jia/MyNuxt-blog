@@ -16,11 +16,11 @@ import Academy from "assets/icons/academy.svg?component";
 
 const author = {
   author_image: "/author.png",
-  name: "Typedef-Joy",
+  name: "Typedef-Jia",
   position: "全栈开发者",
-  email: "2930119859@qq.com",
+  email: "jiaiy311@163.com",
   location: "开封",
-  github: "Typedef-Joy",
+  github: "Typedef-Jia",
   socials: {
     twitter: "MDRT83716131",
     stackoverflow: "#",
