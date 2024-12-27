@@ -17,7 +17,7 @@ import Academy from "assets/icons/academy.svg?component";
 const author = {
   author_image: "/author.png",
   name: "Typedef-Joy",
-  position: "全栈开发人员",
+  position: "全栈开发者",
   email: "2930119859@qq.com",
   location: "开封",
   github: "Typedef-Joy",
