@@ -6,8 +6,8 @@
       >
         Blog
       </h1>
-      <p v-for="tag in tage" :key="tag.tag" class="text-lg text-slate-700 dark:text-slate-400">
-        {{tag.tag.join(',')}}
+      <p class="text-lg text-slate-700 dark:text-slate-400">
+         文章
       </p>
     </header>
     <div class="space-y-16 mx-auto max-w-7xl">
@@ -57,18 +57,7 @@ const {data: articles} = await useAsyncData('home', () =>  queryContent("/articl
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   });
-const filtertags=()=>{
- return  articles.value.map(item=>{
-   return {
-     tag:item.tags.split(',')
-   }
- })
 
-}
-let tage =ref()
-
-tage.value  = filtertags()
-console.log(tage.value)
 
 
 
