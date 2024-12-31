@@ -1,9 +1,7 @@
 <template>
   <div class="p-4 md:w-1/2 md" style="max-width: 544px">
-    <div
-        @click="() => {navigateTo(projectHref,{external:true})}"
-      class="h-full overflow-hidden  rounded-md  border-2 border-gray-200 border-opacity-60 dark:border-gray-700 cursor-pointer"
-    >
+    <div @click="swit(projectHref, projectTitle)"
+      class="h-full overflow-hidden  rounded-md  border-2 border-gray-200 border-opacity-60 dark:border-gray-700 cursor-pointer">
       <div class="p-6">
         <div class="flex flex-row justify-between items-center">
           <div class="my-2">
@@ -11,23 +9,15 @@
           </div>
           <div class="flex flex-row justify-between">
             <div class="mx-1">
-              <a
-                class="text-sm text-gray-500 transition hover:text-gray-600"
-                target="_blank"
-                rel="noopener noreferrer"
-                :href="projectHref"
-                ><span class="sr-only"></span
-                ><ExternalIcon class="w-6 h-6 text-black"
-              /></a>
+              <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer"
+                :href="projectHref"><span class="sr-only"></span>
+                <ExternalIcon class="w-6 h-6 text-black" />
+              </a>
             </div>
             <div class="mx-1">
-              <a
-                class="text-sm text-gray-500 transition hover:text-gray-600"
-                target="_blank"
-                rel="noopener noreferrer"
-                :href="projectGithub"
-                ><span class="sr-only">github</span
-                ><GithubIcon class="w-6 h-6 text-black" />
+              <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer"
+                :href="projectGithub"><span class="sr-only">github</span>
+                <GithubIcon class="w-6 h-6 text-black" />
               </a>
             </div>
           </div>
@@ -45,7 +35,11 @@
         </div>
       </div>
     </div>
+    <Modal v-model="isModalOpen" title="微信扫码体验">
+      <img style="width: 150px" :src="projectHref" alt="">
+    </Modal>
   </div>
+
 </template>
 
 <script>
@@ -57,6 +51,7 @@ export default {
   components: { FolderIcon, ExternalIcon, GithubIcon },
   data() {
     return {
+      isModalOpen: false,
       projectTitle: this.title,
       projectDescription: this.description,
       projectHref: this.href,
@@ -64,9 +59,22 @@ export default {
       projectTech1: this.tech1,
       projectTech2: this.tech2,
       ProjectTech3: this.tech3,
+
     };
   },
-};
+  methods: {
+    swit(projectHref, projectTitle) {
+
+      if (projectTitle === "吃转三职") {
+        this.isModalOpen = true
+      } else {
+        navigateTo(projectHref, { external: true })
+      }
+
+    }
+  }
+}
+
 </script>
 
 <style></style>
